@@ -57,7 +57,7 @@ public class PlaylistController {
         } catch (IOException e) {
             model.addAttribute("error", "Could not read sample playlist");
         }
-        return "playlist"; // This should match the name of the HTML template in src/main/resources/templates
+        return "playlist";
     }
 
 
