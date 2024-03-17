@@ -34,8 +34,8 @@ public class PlaylistController {
             String sampleOutput = playlistService.readSamplePlaylist();
             Playlist playlist = playlistParserService.parsePlaylist(sampleOutput);
 
-            // Assuming the user ID is part of the `OAuth2AuthenticationToken`. If not, you'll have to fetch it.
-            String userId = authentication.getName(); // Or get the userID from the OAuth2 details.
+
+            String userId = authentication.getName();
 
             // Call SpotifyService to create the playlist
             String createPlaylistResponse = spotifyService.createPlaylist(
@@ -44,7 +44,7 @@ public class PlaylistController {
 
             JSONObject responseJson = new JSONObject(createPlaylistResponse);
             String playlistId = responseJson.getString("id");
-            // Store playlistId or add it to the model if you need it in the view
+            // Store playlistId or add it to the model
 
             // Add image to the playlist
             spotifyService.addImageToPlaylist(playlistId, authentication);
@@ -60,9 +60,5 @@ public class PlaylistController {
         return "playlist"; // This should match the name of the HTML template in src/main/resources/templates
     }
 
-
-    // The rest of your code for handling Spotify interactions...
-    // The above optional code assumes you have a method to obtain the userId
-    // and the OAuth2 token is correctly configured in the SpotifyService
 
 }

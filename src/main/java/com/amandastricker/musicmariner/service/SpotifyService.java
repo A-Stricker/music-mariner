@@ -53,7 +53,7 @@ public class SpotifyService {
             if (response.getStatusCode() == HttpStatus.CREATED) {
                 return response.getBody();
             } else {
-                // More specific error handling can be implemented here based on the response status code
+
                 throw new SpotifyServiceException("Failed to create playlist. Status code: " + response.getStatusCode());
             }
         } catch (Exception e) {
@@ -116,7 +116,7 @@ public class SpotifyService {
         return imageInByte;
     }
 
-    // Custom exception class for better error handling
+    // Custom exception class for better error handling, add to this later
     public static class SpotifyServiceException extends RuntimeException {
         public SpotifyServiceException(String message) {
             super(message);

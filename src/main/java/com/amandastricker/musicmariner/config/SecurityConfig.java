@@ -19,7 +19,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                                 .antMatchers("/", "/error", "/webjars/**", "/oauth/**").permitAll()  // Allow access to these without authentication
                                 .anyRequest().authenticated()  // Require authentication for any other request
                 )
-                // other security configurations...
                 .oauth2Login(oauth2Login ->
                         oauth2Login
                                 .defaultSuccessUrl("/playlist", true) // Redirect to /playlist after success
@@ -28,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                                 logout
                                         .logoutSuccessUrl("/").permitAll()  // After logout, redirect to home
                 )
-                // other configurations like CSRF, CORS, session management, etc...
+
                 ;
     }
 }

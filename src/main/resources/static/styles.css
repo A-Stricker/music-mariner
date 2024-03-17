@@ -32,7 +32,7 @@ main {
     padding: 20px;
     max-width: 800px;
     margin: 20px auto;
-    margin-bottom: 60px; /* Added space at the bottom to avoid overlap with the footer */
+    margin-bottom: 60px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@ main {
     color: #fff;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.2em; /* Adjust this value as needed to make the text larger */
+    font-size: 1.2em;
 }
 
 #playlist-name {
@@ -55,7 +55,7 @@ main {
     color: #fff;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.5em; /* Make the playlist name stand out more if desired */
+    font-size: 1.5em;
 }
 
 #song-list {
@@ -67,7 +67,7 @@ main {
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
-    font-size: 0.9em; /* Smaller than the intro and outro text */
+    font-size: 0.9em;
 }
 
 .song-title {
@@ -99,6 +99,6 @@ footer {
     }
 
     footer {
-        position: static; /* Change to static or relative on small screens */
+        position: static;
     }
 }
