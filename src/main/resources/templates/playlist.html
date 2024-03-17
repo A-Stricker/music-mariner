@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${playlist.playlistName} + ' - Music Mariner'">Music Mariner</title>
+    <link href="/styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="image-container">
+        <img src="/images/music-mariner-logo.jpg" alt="Music Mariner Logo" />
+    </div>
+    <h1>Music Mariner</h1>
+</header>
+<main>
+    <section id="intro" th:text="${playlist.intro}">Intro Text</section>
+    <h2 id="playlist-name" th:text="${playlist.playlistName}">Playlist Name</h2>
+    <ul id="song-list">
+        <li th:each="song : ${playlist.songs}">
+            <span class="song-title" th:text="${song.title}">Song Title</span> by
+            <span class="artist-name" th:text="${song.artist}">Artist Name</span>
+        </li>
+    </ul>
+    <section id="outro" th:text="${playlist.outro}">Outro Text</section>
+</main>
+</body>
+</html>
