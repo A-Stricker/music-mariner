@@ -52,7 +52,7 @@ For now, we are not accepting contributes to this project.
 
 ### Contact
 - Amanda Stricker - amanda.stricker@yahoo.com
-- Project Link: https://github.com/yourusername/music-mariner
+- Project Link: https://github.com/A-Stricker/music-mariner
 
 ### Acknowledgements
 - Gratitude to the open-source community.
