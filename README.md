@@ -57,7 +57,7 @@ For now, we are not accepting contributes to this project.
 ### Acknowledgements
 - Gratitude to the open-source community.
 - Special thanks to Spotify for their Web API and openAI for the ability to create custom GPTs.
-- Thanks to every musician who has inpsired in my life-long love of music and entertainment. 
+- Thanks to every musician who has inpsired me in my life-long love of music and entertainment. 
 - Finally, I would like to extend my heartfealt thanks to Professor John Crider at Columbus State Community College for fostering a class and environment that deeply encouraged creativity, 
 critical thinking, and hands-on learning. His invaluable guidance and unwavering support have not only enriched my academic journey but also significantly contributed to the development of this project. 
 His expertise and insights have been a constant source of inspiration, pushing me to explore new ideas and strive for excellence. Thank you, Professor Crider, for your mentorship, encouragement, 
