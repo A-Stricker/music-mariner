@@ -20,7 +20,7 @@ public class PlaylistService {
     }
 
     public String readSamplePlaylist() throws IOException {
-        var resource = resourceLoader.getResource("classpath:sample_output.txt");
+        var resource = resourceLoader.getResource("classpath:honors_symposium.txt");
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
             return reader.lines().collect(Collectors.joining("\n"));
         }

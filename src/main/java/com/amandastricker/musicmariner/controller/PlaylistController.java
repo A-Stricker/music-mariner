@@ -1,6 +1,7 @@
 package com.amandastricker.musicmariner.controller;
 
 import com.amandastricker.musicmariner.model.Playlist;
+import com.amandastricker.musicmariner.model.Song;
 import com.amandastricker.musicmariner.service.PlaylistParserService;
 import com.amandastricker.musicmariner.service.PlaylistService;
 import com.amandastricker.musicmariner.service.SpotifyService;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class PlaylistController {
@@ -49,7 +52,21 @@ public class PlaylistController {
             // Add image to the playlist
             spotifyService.addImageToPlaylist(playlistId, authentication);
 
-            // Add attributes to the model as needed
+            // Search for each track's URI and collect them
+            List<String> trackUris = new ArrayList<>();
+            for (Song song : playlist.getSongs()) {
+                String trackUri = spotifyService.searchTrack(song.getTitle(), song.getArtist(), authentication);
+                if (trackUri != null && !trackUri.isEmpty()) {
+                    trackUris.add(trackUri);
+                }
+            }
+
+            // Add the collected tracks to the playlist
+            if (!trackUris.isEmpty()) {
+                spotifyService.addTracksToPlaylist(playlistId, trackUris, authentication);
+            }
+
+            // Add attributes to the model
             model.addAttribute("playlist", playlist);
             model.addAttribute("createPlaylistResponse", createPlaylistResponse);
             model.addAttribute("playlistId", playlistId);
@@ -59,6 +76,8 @@ public class PlaylistController {
         }
         return "playlist";
     }
+
+
 
 
 }

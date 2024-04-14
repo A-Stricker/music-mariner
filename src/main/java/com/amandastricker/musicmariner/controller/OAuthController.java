@@ -29,7 +29,7 @@ public class OAuthController {
 
         // Use the access token to make requests to the Spotify API
 
-        return "redirect:/playlist"; // Redirect to the playlist view or another appropriate view
+        return "redirect:/playlist";
     }
 }
 
