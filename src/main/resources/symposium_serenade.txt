@@ -4,12 +4,12 @@
 
 "The Scientist" - Coldplay
 "Smarter" - Eisley
-"E=MC2" - Big Audio Dynamite
+"Big Bang Theory Theme" - Barenaked Ladies
 "White & Nerdy" - Weird Al Yankovic
 "Don't Stop Me Now" - Queen
 "Bach: Cello Suite No. 1 in G Major" - Yo-Yo Ma
 "Brain" - Banks
-"I.Q." - Ani DiFranco
+"My IQ" - Ani DiFranco
 "We Are All Made of Stars" - Moby
 "Mathematics" - Mos Def
 "Think" - Aretha Franklin
@@ -17,10 +17,10 @@
 "High Hopes" - Panic! At The Disco
 "Book of Days" - Enya
 "Beethoven: Symphony No. 9" - Berlin Philharmonic & Herbert von Karajan
-"Beautiful Mind" - Nas
+"History Repeating" - Propellerheads feat. Shirley Bassey
 "Clair de Lune" - Claude Debussy
-"Young Einstein" - Yukmouth
-"Symphony of Science" - John Boswell
+"School Spirit" - Kanye West
+"Booksmart Devil" - Silversun Pickups
 "Pure Imagination" - Jamie Cullum
 <<<endplaylist>>>
 <<<startoutro>>>Your playlist has now docked! Thanks for sailing the sound waves with Music Mariner. Anchors aweigh until next time!<<<endoutro>>>

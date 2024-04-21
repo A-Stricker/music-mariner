@@ -1,0 +1,55 @@
+<<<intro>>>Ahoy, music matey! You're about to glide into your 35th with some smooth disco vibes at the roller rink – a classic way to celebrate!<<<endintro>>>
+<<<startplaylistname>>>Disco Roller Rink Grooves<<<endplaylistname>>>
+<<<startplaylist>>>
+"Le Freak" - Chic
+"Get Lucky" - Daft Punk feat. Pharrell Williams
+"Good Times" - Chic
+"Dance, Dance, Dance" - Yowsah, Yowsah, Yowsah
+"Treasure" - Bruno Mars
+"He's the Greatest Dancer" - Sister Sledge
+"Don't Stop 'Til You Get Enough" - Michael Jackson
+"I Feel Love" - Donna Summer
+"Uptown Funk" - Mark Ronson feat. Bruno Mars
+"Got to Give It Up" - Marvin Gaye
+"Lady (Hear Me Tonight)" - Modjo
+"Disco Inferno" - The Trammps
+"Boogie Wonderland" - Earth, Wind & Fire
+"Upside Down" - Diana Ross
+"September" - Earth, Wind & Fire
+"D.A.N.C.E." - Justice
+"Stayin' Alive" - Bee Gees
+"Super Freak" - Rick James
+"Let's Groove" - Earth, Wind & Fire
+"Give Me the Night" - George Benson
+"Lost in Music" - Sister Sledge
+"Rock with You" - Michael Jackson
+"Last Night a DJ Saved My Life" - Indeep
+"Relight My Fire" - Dan Hartman
+"One More Time" - Daft Punk
+"Love Sensation" - Loleatta Holloway
+"All Night Long" - Lionel Richie
+"Boogie Oogie Oogie" - A Taste of Honey
+"Can't Get Enough of Your Love, Babe" - Barry White
+"You Make Me Feel (Mighty Real)" - Sylvester
+"Everybody Dance" - Chic
+"Night Fever" - Bee Gees
+"Another One Bites The Dust" - Queen
+"Kiss" - Prince
+"Ain't No Stoppin' Us Now" - McFadden & Whitehead
+"You Should Be Dancing" - Bee Gees
+"Jungle Boogie" - Kool & The Gang
+"Music Sounds Better with You" - Stardust
+"Rasputin" - Boney M.
+"Funkytown" - Lipps Inc.
+"Rhythm of the Night" - DeBarge
+"Young Hearts Run Free" - Candi Staton
+"I Will Survive" - Gloria Gaynor
+"Kung Fu Fighting" - Carl Douglas
+"Flashdance... What a Feeling" - Irene Cara
+"Bad Girls" - Donna Summer
+"Get Down Tonight" - KC and The Sunshine Band
+"Y.M.C.A." - Village People
+"Happy" - Pharrell Williams
+"Billie Jean" - Michael Jackson
+<<<endplaylist>>>
+<<<startoutro>>>Your playlist has now docked! Thanks for sailing the sound waves with Music Mariner. Anchors aweigh until next time!<<<endoutro>>>

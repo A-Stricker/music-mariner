@@ -1,0 +1,38 @@
+<<<intro>>>Ahoy, music matey! Prepping a playlist for a symposium sounds like a grand adventure on the high seas of intellect and innovation. Let’s set sail with some tunes that vibe with being brainy and brilliant.<<<endintro>>>
+<<<startplaylistname>>>Symposium of Smarts<<<endplaylistname>>>
+<<<startplaylist>>>
+
+"Science Genius Girl" - Freezepop
+"E=MC2" - Big Audio Dynamite
+"Weird Science" - Oingo Boingo
+"White & Nerdy" - Weird Al Yankovic
+"The Scientist" - Coldplay
+"Mathematics" - Mos Def
+"Physics" - Robert Schneider
+"Genius of Love" - Tom Tom Club
+"History Repeating" - Propellerheads feat. Shirley Bassey
+"Booksmart Devil" - Silversun Pickups
+"Building a Mystery" - Sarah McLachlan
+"Oxford Comma" - Vampire Weekend
+"Lab Rat" - Sage Francis
+"Rocket Science" - Throwing Muses
+"Test Drive" - Jin
+"Don’t Stand So Close to Me" - The Police
+"I Will Survive" - Gloria Gaynor
+"Scholarship" - Iggy Pop
+"Blinded by Science" - Thomas Dolby
+"Brainpower" - Freezepop
+"Stereo" - Pavement
+"Poindexter" - Mellowhype
+"The Geek in the Pink" - Jason Mraz
+"The Books I Read" - Talking Heads
+"She Blinded Me with Science" - Thomas Dolby
+"Calculus" - 2gether
+"Knowledge" - Operation Ivy
+"Why Does the Sun Shine? (The Sun Is a Mass of Incandescent Gas)" - They Might Be Giants
+"Intergalactic" - Beastie Boys
+"School Spirit" - Kanye West
+"Scholars" - Bayside
+"Telescope Eyes" - Eisley
+<<<endplaylist>>>
+<<<startoutro>>>Your playlist has now docked! Thanks for sailing the sound waves with Music Mariner. Anchors aweigh until next time!<<<endoutro>>>

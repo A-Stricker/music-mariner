@@ -1,0 +1,19 @@
+<<<intro>>>Ahoy, music matey! Let’s get ready to stretch and headbang with a metal-themed yoga playlist that’ll keep the energy high and bring a unique twist to your hot yoga session! Whether your students are metal aficionados or just curious about the theme, this playlist is designed to energize and then wind down smoothly for that final savasana.<<<endintro>>>
+
+<<<startplaylistname>>>Metal Asana Mix<<<endplaylistname>>>
+
+<<<startplaylist>>>
+
+"Calm Before the Storm" - Light The Torch
+"As I Am" - Dream Theater
+"Higher" - Avenged Sevenfold
+"Strife" - Trivium
+"Words as Weapons" - Seether
+"The Pretender" - Foo Fighters
+"Awake and Alive" - Skillet
+"Ghost Walking" - Lamb of God
+"Prayer" - Disturbed
+"Paranoid" - Black Sabbath
+"Fade to Black" - Metallica
+"Snuff" - Slipknot<<<endplaylist>>>
+<<<startoutro>>>Your playlist has now docked! Thanks for sailing the sound waves with Music Mariner. Anchors aweigh until next time!<<<endoutro>>>

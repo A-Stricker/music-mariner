@@ -1,6 +1,8 @@
 package com.amandastricker.musicmariner.service;
 
+import com.amandastricker.musicmariner.utilities.StringUtils;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
@@ -9,7 +11,6 @@ import org.springframework.security.oauth2.client.authentication.OAuth2Authentic
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.Base64Utils;
@@ -19,12 +20,13 @@ import java.awt.Graphics2D;
 import javax.imageio.ImageIO;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
-
 import org.json.JSONObject;
-import org.springframework.web.util.UriComponentsBuilder;
-import org.springframework.web.util.UriUtils;
+
+
+
 
 
 @Service
@@ -134,40 +136,68 @@ public class SpotifyService {
         headers.setBearerAuth(accessToken);
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        // Attempt a more structured query by specifying artist and track separately
-        String query =  "name:" + trackName + " artist:" + artistName;
-
-        String searchUrl = UriComponentsBuilder.fromHttpUrl(spotifyApiBaseUrl + "/search")
-                .queryParam("q", query)
-                .queryParam("type", "track")
-                .queryParam("limit", "5") // Look through more results to find the best match
-                .encode() // Ensure proper encoding of parameters
-                .toUriString();
-
-        // Print the generated search URL
-        System.out.println("Generated search URL: " + searchUrl);
-
-        HttpEntity<String> entity = new HttpEntity<>(headers);
         try {
+            // Manually encode query parameters to avoid double encoding
+            String encodedTrackName = URLEncoder.encode("track:" + trackName, StandardCharsets.UTF_8);
+            String encodedArtistName = URLEncoder.encode("artist:" + artistName, StandardCharsets.UTF_8);
+            String query = encodedTrackName + "+AND+" + encodedArtistName;
+
+            // Build the URL without using UriComponentsBuilder for encoding
+            String searchUrl = spotifyApiBaseUrl + "/search?q=" + query + "&type=track&limit=10";
+
+            System.out.println("Generated search URL: " + searchUrl);
+
+            HttpEntity<String> entity = new HttpEntity<>(headers);
             ResponseEntity<String> response = restTemplate.exchange(searchUrl, HttpMethod.GET, entity, String.class);
+
+            System.out.println("Response Status Code: " + response.getStatusCode());
+            System.out.println("Response Body: " + response.getBody());
 
             if (response.getStatusCode() == HttpStatus.OK) {
                 JSONObject jsonResponse = new JSONObject(response.getBody());
                 JSONArray tracks = jsonResponse.getJSONObject("tracks").getJSONArray("items");
 
                 if (!tracks.isEmpty()) {
-                    // Directly return the URI of the first (and most relevant) track found
-                    return tracks.getJSONObject(0).getString("uri");
+                    return selectBestMatch(trackName, artistName, tracks); // Use selectBestMatch to find the best track
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace(); // Print the full stack trace for debugging
+            e.printStackTrace();
             throw new SpotifyServiceException("An error occurred while searching for a track", e);
         }
         return null; // Return null if no match was found
-
-
     }
+
+    private String selectBestMatch(String inputTrackName, String inputArtistName, JSONArray tracks) throws JSONException {
+        String normalizedInputTrackName = StringUtils.normalizeString(inputTrackName);
+        String normalizedInputArtistName = StringUtils.normalizeString(inputArtistName);
+
+        String bestMatchUri = null;
+        int bestMatchDistance = Integer.MAX_VALUE;
+
+        for (int i = 0; i < tracks.length(); i++) {
+            JSONObject track = tracks.getJSONObject(i);
+            String spotifyTrackName = track.getString("name");
+            String spotifyArtistName = track.getJSONArray("artists").getJSONObject(0).getString("name");
+
+            String normalizedSpotifyTrackName = StringUtils.normalizeString(spotifyTrackName);
+            String normalizedSpotifyArtistName = StringUtils.normalizeString(spotifyArtistName);
+
+            int trackDistance = StringUtils.levenshteinDistance(normalizedInputTrackName, normalizedSpotifyTrackName);
+            int artistDistance = StringUtils.levenshteinDistance(normalizedInputArtistName, normalizedSpotifyArtistName);
+
+            int totalDistance = trackDistance + artistDistance;
+
+            if (totalDistance < bestMatchDistance) {
+                bestMatchDistance = totalDistance;
+                bestMatchUri = track.getString("uri");
+            }
+        }
+        return bestMatchUri;
+    }
+
+
+
 
     // Method to add tracks to playlist
     public void addTracksToPlaylist(String playlistId, List<String> trackUris, OAuth2AuthenticationToken authentication) {

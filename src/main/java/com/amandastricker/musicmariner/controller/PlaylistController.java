@@ -5,13 +5,12 @@ import com.amandastricker.musicmariner.model.Song;
 import com.amandastricker.musicmariner.service.PlaylistParserService;
 import com.amandastricker.musicmariner.service.PlaylistService;
 import com.amandastricker.musicmariner.service.SpotifyService;
-
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
