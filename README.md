@@ -4,8 +4,8 @@ It interfaces with Spotify's API so that users will instantly see their newly cr
 As the playlist is created, the user will see a webpage displaying a message from Music Mariner and the content of the playlist.
 
 ## Features
-- Conversational input for creating a personalized playlist. (Currenty this feature is not integrated, at Music Mariner we hope to be incorporating and deploying this feature soon.
-        In leui of this feature, there are several pre-loaded repsonses in the project as .txt files)
+- Conversational input for creating a personalized playlist. (Current this feature is not integrated, at Music Mariner we hope to be incorporating and deploying this feature soon.
+        In lei of this feature, there are several preloaded responses in the project as .txt files)
 - Integration with Spotify's Web API for playlist and track management.
 - Custom playlist cover image upload.
 - OAuth2 for Spotify authentication.
@@ -44,7 +44,7 @@ Before you begin, ensure you have met the following requirements:
 The service should now be running on http://localhost:8080.
 
 ### Usage
-Until the conversational input feature is deployed, users can interact with the application using the pre-loaded .txt files that simulate the conversational output. 
+Until the conversational input feature is deployed, users can interact with the application using the preloaded .txt files that simulate the conversational output. 
 To view or modify these files, navigate to src/main/resources.
 
 ### Contributing
@@ -57,8 +57,8 @@ For now, we are not accepting contributes to this project.
 ### Acknowledgements
 - Gratitude to the open-source community.
 - Special thanks to Spotify for their Web API and openAI for the ability to create custom GPTs.
-- Thanks to every musician who has inpsired me in my life-long love of music and entertainment. 
-- Finally, I would like to extend my heartfealt thanks to Professor John Crider at Columbus State Community College for fostering a class and environment that deeply encouraged creativity, 
+- Thanks to every musician who has inspired me in my life-long love of music and entertainment. 
+- Finally, I would like to extend my heartfelt thanks to Professor John Crider at Columbus State Community College for fostering a class and environment that deeply encouraged creativity, 
 critical thinking, and hands-on learning. His invaluable guidance and unwavering support have not only enriched my academic journey but also significantly contributed to the development of this project. 
 His expertise and insights have been a constant source of inspiration, pushing me to explore new ideas and strive for excellence. Thank you, Professor Crider, for your mentorship, encouragement, 
 and for believing in my potential. Your impact extends beyond the classroom, shaping the future paths of your students.
